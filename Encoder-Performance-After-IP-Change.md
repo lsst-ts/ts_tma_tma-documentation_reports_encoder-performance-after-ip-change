@@ -1,4 +1,4 @@
-# EtherCATLineDiagnostic
+# Encoder Performance After IP Change
 
 | **Requested by:** | **AURA**   |
 | ----------------- | ---------- |
@@ -8,7 +8,7 @@
 
 ## Index
 
-- [EtherCATLineDiagnostic](#ethercatlinediagnostic)
+- [Encoder Performance After IP Change](#encoder-performance-after-ip-change)
   - [Index](#index)
   - [Introduction](#introduction)
   - [Receiving Time Analysis](#receiving-time-analysis)
@@ -22,7 +22,7 @@ This document shows the analysis of the data from the axes telemetry. The idea i
 
 In the baseline network configuration, there were two independent VLANs, one for EIB communication and the another one for commanding and telemetry.
 
-```plantuml
+```{uml}
 @startuml
 nwdiag {
     network Axes {
@@ -57,7 +57,7 @@ In tracking mode, commands arrive every 50ms from TMAPXI.
 
 In the new network configuration only one VLAN is used, so all the data flows from/to the same NIC in the AxesPXI
 
-```plantuml
+```{uml}
 @startuml
 nwdiag {
 
